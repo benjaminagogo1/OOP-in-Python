@@ -340,3 +340,5 @@ amount
 date
 category
 payment_type (our latest addition)
+
+## "self" is a reference to the object that is currently being created or used.
