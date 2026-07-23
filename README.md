@@ -328,3 +328,15 @@ Description cannot be empty.
 The update_amount() method can enforce those rules before changing the value.
 
 This is one of the reasons methods are valuable: they give the object control over its own data.
+
+
+
+
+
+### Our answer was:
+
+description
+amount
+date
+category
+payment_type (our latest addition)
