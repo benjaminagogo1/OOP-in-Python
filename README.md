@@ -212,3 +212,8 @@ They build:
 * Multi-user support
 
 We'll follow the same philosophy. By the time we're finished, your Expense Tracker won't just be a beginner exercise—it will have evolved into a project that demonstrates object-oriented design, clean code, and progressively richer functionality. That same incremental approach is what we'll later use for the Contact Book, Banking System, Hospital Management System, and ultimately the ERP system.
+
+
+
+
+### A good design is not one that predicts every future requirement. It's one that can evolve cleanly as new requirements appear.
