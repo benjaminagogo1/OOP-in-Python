@@ -232,3 +232,99 @@ instead of:
 Rice - ₦8,500
 
 you only change the Expense class.
+
+
+## This introduces a principle you'll hear often in software engineering:
+
+Each class should have one primary responsibilty.
+
+# This is called low coupling.
+
+
+
+
+
+
+## is this better?
+
+Let's imagine we didn't have an Expense class.
+
+Instead, we did this:
+
+expenses = [
+    {
+        "description": "Rice",
+        "amount": 8500,
+        "date": "...",
+        "category": "Food"
+    },
+    ...
+]
+
+This works.
+
+In fact, our first Expense Tracker worked this way.
+
+So why change?
+
+Here's the reason.
+
+Imagine one day we decide:
+
+Every expense should automatically calculate VAT.
+
+Where should that logic go?
+
+With dictionaries, we'd end up writing code like:
+
+vat = expense["amount"] * 0.075
+
+everywhere.
+
+In multiple functions.
+
+Maybe 15 different places.
+
+
+
+
+
+## Encapsulation.
+
+
+
+## Objects should own their data and the operations that naturally belong to that data.
+
+
+
+
+## That's one of the biggest strengths of good OOP design: your domain model stays stable while the storage mechanism evolves.
+
+
+One of the responsibilities of a constructor is to help maintain the object's valid state.
+For example, we might later decide:
+
+amount must be greater than 0,
+description cannot be empty,
+category must be one of the allowed categories.
+
+The constructor is one place where those rules can be enforced.
+
+
+
+### We are not allowing people to directly change the attributes (e.g., expense.amount = ...)—at least not in our design discussion.
+
+Instead, we're saying:
+
+"If you want to change an expense, ask the expense object to do it."
+
+Why?
+
+Because later we might want rules like:
+
+Amount cannot be negative.
+Description cannot be empty.
+
+The update_amount() method can enforce those rules before changing the value.
+
+This is one of the reasons methods are valuable: they give the object control over its own data.
