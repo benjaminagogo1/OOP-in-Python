@@ -217,3 +217,18 @@ We'll follow the same philosophy. By the time we're finished, your Expense Track
 
 
 ### A good design is not one that predicts every future requirement. It's one that can evolve cleanly as new requirements appear.
+
+
+
+### For example, if one day you decide an expense should display:
+
+Rice
+Food
+₦8,500
+23 July 2026
+
+instead of:
+
+Rice - ₦8,500
+
+you only change the Expense class.
