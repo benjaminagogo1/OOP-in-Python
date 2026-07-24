@@ -344,3 +344,7 @@ payment_type (our latest addition)
 ## "self" is a reference to the object that is currently being created or used.
 
 ### self is the name of the first parameter, and Python automatically passes the object being initialized into it.
+
+
+
+### An object stays alive as long as at least one reference points to it.
