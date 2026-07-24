@@ -348,3 +348,5 @@ payment_type (our latest addition)
 
 
 ### An object stays alive as long as at least one reference points to it.
+
+This relationship is called composition ("has-a" relationship).
