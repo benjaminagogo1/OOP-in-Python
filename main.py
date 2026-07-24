@@ -49,7 +49,8 @@ class ExpenseTracker:
 
 tracker = ExpenseTracker()
 
-while True:
+running = True
+while running:
     print("\nExpense Tracker")
     print("1. Add Expense")
     print("2. Show Expense")
@@ -57,3 +58,27 @@ while True:
     print("4. Update Expense")
     print("5. Delete Expense")
     print("6. Exit")
+
+    try:
+        choice = int(input("Choose an option:  "))
+    except ValueError:
+        print("Invalid input: Please, only digits are allowed.")
+        continue
+    if choice == 1:
+        tracker.add_expense()
+
+    if choice == 2:
+        tracker.show_expense()
+
+    if choice == 3:
+        tracker.search_expense()
+
+    if choice == 4:
+        tracker.update_expense()
+
+    if choice == 5:
+        tracker.delete_expense()
+
+    if choice == 6:
+        running = False
+
