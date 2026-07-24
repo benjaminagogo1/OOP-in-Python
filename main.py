@@ -44,3 +44,16 @@ class ExpenseTracker:
 
         expense.amount = amount
         return True
+
+
+
+tracker = ExpenseTracker()
+
+while True:
+    print("\nExpense Tracker")
+    print("1. Add Expense")
+    print("2. Show Expense")
+    print("3. Search Expense")
+    print("4. Update Expense")
+    print("5. Delete Expense")
+    print("6. Exit")
